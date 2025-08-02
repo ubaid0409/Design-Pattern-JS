@@ -3,7 +3,7 @@ class OldPrinter {
   print() {
     return "Old Printer prints";
   }
-}
+} 
 
 class NewPrinter {
   printNewWay() {
@@ -30,6 +30,10 @@ class TV {
   turnOn() { console.log("TV is ON"); }
   turnOff() { console.log("TV is OFF"); }
 }
+// class Radio{
+//   turnOnRadio() { console.log("Radio is ON"); }
+//   turnOffRadio() { console.log("Radio is OFF"); }
+// }
 
 class Remote {
   constructor(device) {
@@ -39,10 +43,16 @@ class Remote {
   pressPower() {
     this.device.turnOn();
   }
+  // }
+  // pressPowerForRadio(){
+  //   this.device.turnOnRadio();
+  // }
 }
 
 const remote = new Remote(new TV());
+// const remoteR = new Remote(new Radio());
 remote.pressPower(); // TV is ON
+// remoteR.pressPowerForRadio(); // Radio is ON
 
 
 // Composite pattern/////////////////////////////////////////////////////////////
